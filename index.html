@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Week Project — Settimana III</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+
+    <!-- Titolo dell'app + sottotitolo + button tema chiaro/scuro -->
+    <h1>La mia Bookshelf</h1>
+    <p>Aggiungi i libri che hai letto o che vuoi leggere.</p>
+    <button id="btnTema">tema</button>
+
+  </header>
+
+  <main>
+
+    <section class="form">
+
+      <h2>Aggiungi un libro</h2>
+
+      <form id="formLibro">
+        <input type="text" id="titolo" placeholder="Titolo" required>
+
+        <input type="text" id="autore" placeholder="Autore" required>
+
+        <input type="number" id="anno" placeholder="Anno" required>
+
+        <select id="stato">
+          <option value="da-leggere">Da leggere</option>
+          <option value="letto">Letto</option>
+        </select>
+
+        <button type="submit">Aggiungi</button>
+      </form>
+
+    </section>
+
+    <section class="controlli">
+      <!-- Ricerca live -->
+      <input type="text" id="Ricerca" placeholder="cerca per titolo o autore">
+
+      <!-- menu tentina1 -->
+
+      <select id="filtro1">
+        <option value="tutti">Tutti</option>
+        <option value="letto">Solo letti</option>
+        <option value="da-leggere">Solo da leggere</option>
+      </select>
+
+      <!-- menu tentina2 -->
+
+      <select id="filtro2">
+        <option value="anno-crescente">Anno crescente</option>
+        <option value="anno-decrescente">Anno decrescente</option>
+        <option value="titolo-az">Titolo A-Z</option>
+        <option value="titolo-za">Titolo Z-A</option>
+      </select>
+
+    </section>
+
+    <section class="statistiche">
+      <!-- Conteggi  -->
+      <div>
+        <p id="totale" class="numero-statistica">0</p>
+        <p>Totale</p>
+      </div>
+
+      <div>
+        <p id="letti" class="numero-statistica">0</p>
+        <p>Letti</p>
+      </div>
+
+      <div>
+        <p id="daLeggere" class="numero-statistica">0</p>
+        <p>Da leggere</p>
+      </div>
+
+      <!-- barra percentuale  -->
+
+      <div>
+        <div class="barra-progresso">
+          <div id="barraRiempimento" class="barra-riempimento"></div>
+        </div>
+
+        <p>Percentuale di libri letti</p>
+      </div>
+
+    </section>
+
+    <section class="lista">
+      <!-- Container che render() ricostruisce a ogni cambio di stato -->
+    </section>
+
+    <div id="notifica"></div>
+
+  </main>
+
+  <footer>
+    <!-- Autore, anno -->
+    <p>Bookshelf — Louis - Epicode © 2026</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

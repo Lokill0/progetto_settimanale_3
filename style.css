@@ -1,0 +1,360 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  color: #29332c;
+  background-color: #f1f2ee;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: #63836a;
+}
+
+header {
+  position: relative;
+  background-color: #202522;
+  color: #ffffff;
+  padding: 24px 5%;
+  min-height: 110px;
+}
+
+header h1 {
+  font-size: 28px;
+  margin-bottom: 3px;
+}
+
+header p {
+  color: #c5cdc6;
+  font-size: 14px;
+}
+
+#btnTema {
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+main {
+  width: 90%;
+  max-width: 1000px;
+  margin: 30px auto;
+}
+
+.form,
+.controlli,
+.statistiche,
+.lista {
+  background-color: #fffefa;
+  border: 1px solid #e2e4dd;
+  border-radius: 10px;
+  padding: 22px;
+  margin-bottom: 18px;
+  box-shadow: 0 2px 6px rgba(30, 40, 30, 0.04);
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+#formLibro input,
+#formLibro select {
+  font: inherit;
+  font-size: 14px;
+  padding: 11px;
+  border: 1px solid #d8ddd6;
+  border-radius: 6px;
+  background-color: #ffffff;
+  color: #29332c;
+  margin-right: 1%;
+}
+
+#titolo,
+#autore {
+  width: 22%;
+}
+
+#anno {
+  width: 12%;
+}
+
+#stato {
+  width: 20%;
+}
+
+input:focus,
+select:focus {
+  outline: 2px solid #8ca992;
+  outline-offset: 1px;
+}
+
+button {
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 16px;
+  background-color: #426b50;
+  color: #ffffff;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #31553d;
+}
+
+#formLibro button {
+  display: block;
+  margin-top: 14px;
+}
+
+.controlli input,
+.controlli select {
+  font: inherit;
+  font-size: 14px;
+  padding: 11px;
+  border: 1px solid #d8ddd6;
+  border-radius: 6px;
+  background-color: #ffffff;
+  color: #29332c;
+  margin-right: 1%;
+}
+
+#Ricerca {
+  width: 46%;
+}
+
+#filtro1,
+#filtro2 {
+  width: 24%;
+}
+
+.statistiche>div {
+  display: inline-block;
+  width: 24%;
+  vertical-align: top;
+  text-align: center;
+  padding: 10px 4px;
+}
+
+.numero-statistica {
+  font-size: 27px;
+  font-weight: 700;
+  color: #426b50;
+}
+
+.statistiche>div p:last-child {
+  font-size: 13px;
+  color: #68736a;
+}
+
+.barra-progresso {
+  width: 100%;
+  height: 10px;
+  background-color: #e5e9e2;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 8px 0;
+}
+
+.barra-riempimento {
+  width: 0%;
+  height: 100%;
+  background-color: #426b50;
+  border-radius: 10px;
+  transition: width 0.3s;
+}
+
+.lista {
+  min-height: 120px;
+}
+
+.libro {
+  background-color: #fafbf8;
+  border: 1px solid #e0e4dc;
+  border-radius: 8px;
+  padding: 16px;
+  margin-top: 12px;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.libro:hover {
+  border-color: #b7c8b8;
+}
+
+.libro h3 {
+  font-size: 17px;
+  margin-bottom: 5px;
+}
+
+.libro p {
+  font-size: 14px;
+  color: #68736a;
+  margin-bottom: 8px;
+}
+
+.libro button {
+  margin: 5px 5px 0 0;
+}
+
+.stato-letto {
+  color: #326641;
+  font-weight: 600;
+}
+
+.stato-da-leggere {
+  color: #94651e;
+  font-weight: 600;
+}
+
+#notifica {
+  display: none;
+  padding: 12px 16px;
+  margin: 0 0 18px;
+  border-radius: 7px;
+  background-color: #e3eee4;
+  color: #285337;
+  border: 1px solid #c8ddcb;
+}
+
+footer {
+  text-align: center;
+  padding: 24px 15px;
+  color: #707970;
+  font-size: 13px;
+}
+
+body.dark-mode {
+  color: #e7ece7;
+  background-color: #171b18;
+}
+
+body.dark-mode .form,
+body.dark-mode .controlli,
+body.dark-mode .statistiche,
+body.dark-mode .lista {
+  background-color: #252b26;
+  border-color: #3b443c;
+  box-shadow: none;
+}
+
+body.dark-mode input,
+body.dark-mode select {
+  background-color: #303831;
+  color: #f0f3f0;
+  border-color: #4b574d;
+}
+
+body.dark-mode .numero-statistica {
+  color: #a8d0ad;
+}
+
+body.dark-mode .statistiche>div p:last-child,
+body.dark-mode .libro p {
+  color: #bdc7bd;
+}
+
+body.dark-mode .libro {
+  background-color: #2c332d;
+  border-color: #424d43;
+}
+
+body.dark-mode .libro:hover {
+  border-color: #7d9b80;
+}
+
+body.dark-mode .barra-progresso {
+  background-color: #414941;
+}
+
+body.dark-mode .barra-riempimento {
+  background-color: #83b78b;
+}
+
+body.dark-mode footer {
+  color: #aab4ab;
+}
+
+body.dark-mode #notifica {
+  background-color: #293e2e;
+  color: #c9e8ce;
+  border-color: #46694d;
+}
+
+body.dark-mode .stato-letto {
+  color: #a8d9b0;
+}
+
+body.dark-mode .stato-da-leggere {
+  color: #f0cc83;
+}
+
+body.dark-mode a:hover {
+  color: #a8d0ad;
+}
+
+@media (max-width: 700px) {
+  header {
+    padding: 22px 5%;
+  }
+
+  header h1 {
+    font-size: 23px;
+    padding-right: 85px;
+  }
+
+  header p {
+    padding-right: 85px;
+  }
+
+  #btnTema {
+    right: 5%;
+  }
+
+  main {
+    width: 94%;
+    margin-top: 18px;
+  }
+
+  .form,
+  .controlli,
+  .statistiche,
+  .lista {
+    padding: 15px;
+  }
+
+  #titolo,
+  #autore,
+  #anno,
+  #stato {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  #Ricerca,
+  #filtro1,
+  #filtro2 {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  .statistiche>div {
+    width: 48%;
+  }
+}
